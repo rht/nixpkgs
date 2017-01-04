@@ -252,7 +252,7 @@ in {
 
   pycangjie = if isPy3k then callPackage ../development/python-modules/pycangjie { } else throw "pycangjie not supported for interpreter ${python.executable}";
 
-  pycrypto = callPackage ../development/python-modules/pycrypto { };
+  pycrypto = self.pycryptodome;
 
   pycryptodome = callPackage ../development/python-modules/pycryptodome { };
 
