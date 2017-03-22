@@ -1,6 +1,6 @@
 { stdenv, fetchurl, zlib ? null, zlibSupport ? true, bzip2, pkgconfig, libffi
 , sqlite, openssl, ncurses, python, expat, tcl, tk, tix, xlibsWrapper, libX11
-, makeWrapper, callPackage, self, gdbm, db
+, makeWrapper, callPackage, self, gdbm, db, pythonPackages
 # For the Python package set
 , pkgs, packageOverrides ? (self: super: {})
 }:
@@ -8,7 +8,7 @@
 assert zlibSupport -> zlib != null;
 
 let
-  majorVersion = "5.6";
+  majorVersion = "5.7";
   minorVersion = "0";
   minorVersionSuffix = "";
   pythonVersion = "2.7";
@@ -21,22 +21,10 @@ in stdenv.mkDerivation rec {
 
     src = fetchurl {
       url = "https://bitbucket.org/pypy/pypy/get/release-pypy${pythonVersion}-v${version}.tar.bz2";
-      sha256 = "145a0kd5c0s1v2rpavw9ihncfb05s2x7chc70v8fssvyxq601911";
+      sha256 = "0r86bgn16vr5z77ggr0spsw72488lgidngmcdbk235dirm43nx3i";
     };
 
-   # http://bugs.python.org/issue27369
-    postPatch = let
-      expatch = fetchurl {
-        name = "tests-expat-2.2.0.patch";
-        url = "http://bugs.python.org/file43514/0001-Fix-Python-2.7.11-tests-for-Expat-2.2.0.patch";
-        sha256 = "1j3pa7ly9xrhp8jjwg5l77z7i3y68gx8f8jchqk6zc39d9glq3il";
-      };
-      in ''
-      patch lib-python/2.7/test/test_pyexpat.py < '${expatch}'
-      substituteInPlace "lib-python/2.7/lib-tk/Tix.py" --replace "os.environ.get('TIX_LIBRARY')" "os.environ.get('TIX_LIBRARY') or '${tix}/lib'"
-    '';
-
-    buildInputs = [ bzip2 openssl pkgconfig python libffi ncurses expat sqlite tk tcl xlibsWrapper libX11 makeWrapper gdbm db ]
+    buildInputs = [ bzip2 openssl pkgconfig python libffi ncurses expat sqlite tk tcl xlibsWrapper libX11 makeWrapper gdbm db pythonPackages.cffi ]
       ++ stdenv.lib.optional (stdenv ? cc && stdenv.cc.libc != null) stdenv.cc.libc
       ++ stdenv.lib.optional zlibSupport zlib;
 
@@ -139,7 +127,7 @@ in stdenv.mkDerivation rec {
 
     meta = with stdenv.lib; {
       homepage = http://pypy.org/;
-      description = "Fast, compliant alternative implementation of the Python language (2.7.8)";
+      description = "Fast, compliant alternative implementation of the Python language (2.7.13)";
       license = licenses.mit;
       platforms = platforms.linux;
       maintainers = with maintainers; [ domenkozar ];
