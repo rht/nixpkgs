@@ -4960,11 +4960,11 @@ in {
   bcrypt = callPackage ../development/python-modules/bcrypt.nix { };
 
   cffi = if isPyPy then null else buildPythonPackage rec {
-    name = "cffi-1.9.1";
+    name = "cffi-1.10.0";
 
     src = pkgs.fetchurl {
       url = "mirror://pypi/c/cffi/${name}.tar.gz";
-      sha256 = "563e0bd53fda03c151573217b3a49b3abad8813de9dd0632e10090f6190fdaf8";
+      sha256 = "1mffyilq4qycm8gs4wkgb18rnqil8a9blqq77chdlshzxc8jkc5k";
     };
 
     propagatedBuildInputs = with self; [ pkgs.libffi pycparser ];
