@@ -18,7 +18,7 @@ buildRustPackage rec {
   meta = {
     description = "Directly run Ethereum bytecode";
     homepage = https://github.com/dapphub/ethrun/;
-    maintainers = [stdenv.lib.maintainers.dbrock];
+    maintainers = with maintainers; [ dbrock ];
     inherit version;
   };
 }

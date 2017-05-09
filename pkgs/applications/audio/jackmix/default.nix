@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
     description = "Matrix-Mixer for the Jack-Audio-connection-Kit";
     homepage = http://www.arnoldarts.de/jackmix/;
     license = stdenv.lib.licenses.gpl2;
-    maintainers = [ stdenv.lib.maintainers.kampfschlaefer ];
+    maintainers = with maintainers; [ kampfschlaefer ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

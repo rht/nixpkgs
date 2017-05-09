@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     '';
     homepage = http://jack-rack.sourceforge.net/;
     license = stdenv.lib.licenses.gpl2Plus;
-    maintainers = [ stdenv.lib.maintainers.astsmtl ];
+    maintainers = with maintainers; [ astsmtl ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

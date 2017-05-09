@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     homepage = http://plugin.org.uk/timemachine/;
     license = stdenv.lib.licenses.lgpl2;
     platforms = stdenv.lib.platforms.linux;
-    maintainers = [ stdenv.lib.maintainers.nico202 ];
+    maintainers = with maintainers; [ nico202 ];
   };
 }
 

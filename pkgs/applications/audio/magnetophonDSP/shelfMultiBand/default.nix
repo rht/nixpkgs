@@ -33,6 +33,6 @@ stdenv.mkDerivation rec {
     description = "A multiband compressor made from shelving filters.";
     homepage = https://github.com/magnetophon/shelfMultiBand;
     license = stdenv.lib.licenses.gpl3;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
   };
 }

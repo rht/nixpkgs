@@ -18,6 +18,6 @@ stdenv.mkDerivation rec {
     homepage = "http://schismtracker.org/";
     license = stdenv.lib.licenses.gpl2;
     platforms = [ "x86_64-linux" "i686-linux" ];
-    maintainers = [ stdenv.lib.maintainers.ftrvxmtrx ];
+    maintainers = with maintainers; [ ftrvxmtrx ];
   };
 }

@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
     version = "${version}";
     homepage = "http://essej.net/sooperlooper/index.html";
     license = stdenv.lib.licenses.gpl2;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

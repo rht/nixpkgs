@@ -62,7 +62,7 @@
     description = "Creates MIDI tracks for a soloist to perform over from a user supplied file containing chords";
     homepage =  http://www.mellowood.ca/mma/index.html;
     license = stdenv.lib.licenses.gpl2;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

@@ -51,6 +51,6 @@ stdenv.mkDerivation rec {
     description = "Turn your voice into a synthesizer";
     homepage = https://github.com/magnetophon/VoiceOfFaust;
     license = stdenv.lib.licenses.gpl3;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
   };
 }

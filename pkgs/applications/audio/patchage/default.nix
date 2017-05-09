@@ -25,6 +25,6 @@ stdenv.mkDerivation rec {
     homepage = http://non.tuxfamily.org;
     license = stdenv.lib.licenses.lgpl3;
     platforms = stdenv.lib.platforms.linux;
-    maintainers = [ stdenv.lib.maintainers.nico202 ];
+    maintainers = with maintainers; [ nico202 ];
   };
 }

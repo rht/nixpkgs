@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
     '';
     homepage = http://www.ladspa.org/ladspa_sdk/overview.html;
     license = stdenv.lib.licenses.lgpl2;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

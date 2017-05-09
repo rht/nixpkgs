@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
     description = "A collection of Pd objectclasses for OSC-messages";
     homepage = http://puredata.info/downloads/osc;
     license = stdenv.lib.licenses.gpl2;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

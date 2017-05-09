@@ -79,7 +79,7 @@ stdenv.mkDerivation rec {
     description = "An interactive sequencer for the intermedia arts";
     homepage = http://i-score.org/;
     license = stdenv.lib.licenses.cecill20;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

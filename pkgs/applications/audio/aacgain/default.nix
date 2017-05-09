@@ -44,6 +44,6 @@ stdenv.mkDerivation {
     homepage = https://github.com/mulx/aacgain;
     license = stdenv.lib.licenses.gpl2;
     platforms = stdenv.lib.platforms.linux;
-    maintainers = [ stdenv.lib.maintainers.robbinch ];
+    maintainers = with maintainers; [ robbinch ];
   };
 }

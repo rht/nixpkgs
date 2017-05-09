@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
     version = "${version}";
     homepage = http://kokkinizita.linuxaudio.org/linuxaudio/ladspa/index.html;
     license = stdenv.lib.licenses.gpl2Plus;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

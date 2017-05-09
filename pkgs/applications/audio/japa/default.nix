@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
     description = "A 'perceptual' or 'psychoacoustic' audio spectrum analyser for JACK and ALSA";
     homepage = http://kokkinizita.linuxaudio.org/linuxaudio/index.html;
     license = stdenv.lib.licenses.gpl2;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

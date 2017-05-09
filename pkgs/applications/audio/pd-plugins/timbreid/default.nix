@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
     description = "A collection of audio feature analysis externals for puredata";
     homepage = http://williambrent.conflations.com/pages/research.html;
     license = stdenv.lib.licenses.gpl3;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

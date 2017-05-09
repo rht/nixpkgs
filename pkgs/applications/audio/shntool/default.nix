@@ -16,6 +16,6 @@ stdenv.mkDerivation rec {
     homepage = http://www.etree.org/shnutils/shntool/;
     license = stdenv.lib.licenses.gpl2Plus;
     platforms = stdenv.lib.platforms.all;
-    maintainers = with stdenv.lib.maintainers; [ jcumming ];
+    maintainers = with maintainers; [ jcumming ];
   };
 }

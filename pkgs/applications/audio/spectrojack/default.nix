@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
     description = "A little spectrogram/audiogram/sonogram/whatever for JACK";
     homepage = http://sed.free.fr/spectrojack;
     license = stdenv.lib.licenses.publicDomain;
-    maintainers = with stdenv.lib.maintainers; [ sleexyz ];
+    maintainers = with maintainers; [ sleexyz ];
     platforms = with stdenv.lib.platforms; linux;
   };
 }

@@ -74,7 +74,7 @@ in buildPythonApplication {
       & internet radio, and all major audio formats.
     '';
 
-    maintainers = [ stdenv.lib.maintainers.coroa ];
+    maintainers = with maintainers; [ coroa ];
     homepage = http://code.google.com/p/quodlibet/;
   };
 }

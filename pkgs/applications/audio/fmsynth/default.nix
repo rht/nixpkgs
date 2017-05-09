@@ -42,7 +42,7 @@ stdenv.mkDerivation rec {
     '';
     homepage = https://github.com/Themaister/libfmsynth;
     license = stdenv.lib.licenses.mit;
-    maintainers = [ stdenv.lib.maintainers.magnetophon ];
+    maintainers = with maintainers; [ magnetophon ];
     platforms = stdenv.lib.platforms.linux;
   };
 }

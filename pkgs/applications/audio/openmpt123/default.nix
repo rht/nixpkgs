@@ -17,7 +17,7 @@ in stdenv.mkDerivation rec {
     description = "A cross-platform command-line based module file player";
     homepage = https://lib.openmpt.org/libopenmpt/;
     license = licenses.bsd3;
-    maintainers = [ stdenv.lib.maintainers.gnidorah ];
+    maintainers = with maintainers; [ gnidorah ];
     platforms = stdenv.lib.platforms.unix;
   };
 }

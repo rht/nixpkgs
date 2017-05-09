@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   meta = {
     homepage = "http://www.ympd.org";
     description = "Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS";
-    maintainers = [ stdenv.lib.maintainers.siddharthist ];
+    maintainers = with maintainers; [ siddharthist ];
     platforms = stdenv.lib.platforms.unix;
   };
 }
